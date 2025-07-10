@@ -1,0 +1,139 @@
+/* ==========================================
+   COMPONENTE: LIVRO
+   ========================================== */
+
+/* Container principal do card do livro */
+section {
+    width: 262px;
+    /* Largura fixa do card */
+    min-height: 382px;
+    /* Altura mínima para manter consistência */
+    margin: 8px;
+    /* Margem externa padrão */
+    display: flex;
+    /* Layout flexbox */
+    flex-direction: column;
+    /* Organização vertical */
+    align-items: center;
+    /* Centralização horizontal */
+    background-color: #FFFFFF;
+    /* Fundo branco */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    position: relative;
+    /* Posicionamento relativo para elementos filhos */
+    overflow: hidden;
+    /* Esconde conteúdo que ultrapassa */
+    padding-top: 16px;
+    /* Espaçamento superior interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil */
+    margin-left: 64px;
+    /* Margem esquerda específica */
+}
+
+/* Container interno para informações do livro */
+section .info-livro {
+    display: flex;
+    /* Layout flexbox */
+    flex-direction: column;
+    /* Organização vertical */
+    align-items: center;
+    /* Centralização horizontal */
+    height: 100%;
+    /* Ocupa toda altura disponível */
+    overflow: hidden;
+    /* Esconde conteúdo que ultrapassa */
+}
+
+/* Espaçamento uniforme para todos os elementos filhos */
+section .info-livro>* {
+    margin: 8px;
+    /* Margem uniforme para todos os elementos */
+}
+
+/* Estilo para títulos principais (h2) */
+.texto-h2 {
+    font-family: var(--font-montserrat);
+    /* Fonte Montserrat */
+    font-size: 20px;
+    /* Tamanho da fonte */
+    font-weight: var(--font-weight-bold);
+    /* Peso da fonte em negrito */
+    line-height: 26px;
+    /* Altura da linha */
+    text-align: center;
+    /* Texto centralizado */
+    max-width: 90%;
+    /* Largura máxima para evitar quebra */
+}
+
+/* Estilo para subtítulos (h3) */
+.texto-h3 {
+    font-family: var(--font-montserrat);
+    /* Fonte Montserrat */
+    font-size: 16px;
+    /* Tamanho da fonte menor que h2 */
+    font-weight: var(--font-weight-normal);
+    /* Peso da fonte normal */
+    line-height: 20px;
+    /* Altura da linha */
+    text-align: center;
+    /* Texto centralizado */
+    color: var(--color-secundaria);
+    /* Cor secundária definida nas variáveis */
+}
+
+.imagem {
+    margin-top: 10%;
+    /* Espaçamento superior */
+}
+
+/* Estilo para a imagem do livro */
+section img {
+    width: 128px;
+    /* Largura fixa da imagem */
+    height: 184px;
+    /* Altura fixa da imagem */
+    margin-bottom: 20px;
+
+
+}
+
+/* Botão de favorito */
+.favorito-btn {
+    position: absolute;
+    /* Posicionamento absoluto */
+    top: 2%;
+    /* Espaçamento superior */
+    right: 25px;
+    /* Distância da direita */
+    background-color: transparent;
+    /* Fundo transparente */
+    border: none;
+    /* Remove borda */
+    cursor: pointer;
+    /* Cursor de ponteiro */
+    font-size: 30px;
+    /* Tamanho do ícone */
+    color: #ff5252;
+    /* Cor vermelha para favorito */
+    padding: 0;
+    /* Remove padding interno */
+    outline: none;
+    /* Remove outline do foco */
+}
+
+/* Efeito hover no botão de favorito */
+.favorito-btn:hover {
+    opacity: 0.8;
+    /* Reduz opacidade */
+    transform: scale(1.1);
+    /* Aumenta tamanho em 10% */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    /* Transição suave */
+}
+
+.favorito-icon-ativo {
+    color: #ff5252;
+}
